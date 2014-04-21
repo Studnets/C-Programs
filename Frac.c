@@ -17,5 +17,5 @@ int main(void) {
 			count = 2;
 		else if top%count && bot%count != 0
 			count++;
-	
+	return 0;
 	}
