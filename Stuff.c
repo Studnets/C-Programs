@@ -4,21 +4,24 @@
 
 #include <stdio.h>
 
-int main(void) {
-
+int main() {
+  // Declare Variables Here
   char ch;
   int len;
 
-//  len = 0-1;
+  // Initialize Length
   len = 0;
+  
+  // Ask User input
   printf("Type something: ");
 
-  while (ch != '\n') {
+  // While the user doesn't enter a newline, increment
+  while ((ch = getchar()) != '\n') {
     len++;
-    ch = getchar();
   }
 
+  // Print length of word
   printf("%d char long", len);
+  
   return 0;
-
 }
