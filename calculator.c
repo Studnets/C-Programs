@@ -1,5 +1,5 @@
 //LET THE CODE BEGIN
-#include <std.io>
+#include <stdio.h>
 main() {
   //functions here
   printf("Welcome to K&A 4-function calculator!");
