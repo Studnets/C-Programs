@@ -1,26 +1,28 @@
 //LET THE CODE BEGIN
 #include <stdio.h>
-main() {
-  //functions here
-  int mark=1;
-  char input[count];
+#include <string.h>
+main(void) {
+  int count=0, mark=0;
+  char input[20];
   
-  printf("Welcome to K&A 4-function calculator!");
+  printf("Welcome to K&A 4-function calculator! \n");
   
-  while (mark > 0) {
-    scanf("Enter a number: %d", &input[count]);
-    fgets(input, sizeof(input), stdin);  //Input, memory size, reads input
-    for (count = 0; count < strlen(input); ++count)
-    {
-      if (!isdigit(input[count]))
-      {
-          mark = 0;
-          break;
-      }
-      else
-        printf("Invalid input!");
-    }
+  while (mark==0) {
+  	printf("Enter First number: \n"); 
+  	scanf("%s", &input);
+  	while(input[count] != '\0') {
+  	  if (isdigit(input[count])==1) {
+  		  count++;
+  		}
+  		if (isdigit(input[count])==0 && (input[count] != '\0')) {
+  			printf("Enter Valid input* (Integer) \n");
+  			break;
+  		}
+  	}
+  	if (input[count]=='\0') {
+  	break;
+  	}
   }
-  
+  printf("Input Is Integer");
   return 0;
 }
